@@ -27,7 +27,7 @@ dependencies {
   compile rootProject.ext.dependencies.supportAnnotations
 
   compile project(':repository')
-  //compile project(':ggglib')
+  compile project(':ggglib')
 
   testCompile rootProject.ext.testDependencies.junit
   testCompile rootProject.ext.testDependencies.mockito

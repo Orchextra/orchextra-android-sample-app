@@ -58,7 +58,7 @@ dependencies {
   releaseCompile rootProject.ext.dependencies.leakcanaryRelease
 
   compile project(':orchextrasdk')
-  //compile project(':ggglogger')
+  compile project(':ggglogger')
 
   testCompile rootProject.ext.testDependencies.junit
 

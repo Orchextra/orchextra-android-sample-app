@@ -5,3 +5,5 @@ include ':app', ':presentation', ':domain', ':repository', ':data',
     ':ggglib', ':ggglogger'
 
 project(':orchextrasdk').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk')
+project(':ggglib').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/gigigo-gigigoutilssuite-android/ggglib')
+project(':ggglogger').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/gigigo-gigigoutilssuite-android/ggglogger')
