@@ -1,0 +1,16 @@
+plugins {
+    id "net.ltgt.apt" version "0.3"
+}
+apply plugin: 'java'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+dependencies {
+    compile project(':domain')
+    compile 'me.panavtec:threaddecoratedview-common:1.5.1'
+    apt 'me.panavtec:threaddecoratedview-compiler:1.5.1'
+
+    testCompile rootProject.ext.testDependencies.junit
+    testCompile rootProject.ext.testDependencies.mockito
+}
