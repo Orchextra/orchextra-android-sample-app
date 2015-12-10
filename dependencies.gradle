@@ -14,7 +14,8 @@ allprojects {
                     coordinator                : 'me.panavtec:coordinator:1.1.5',
                     coordinatorCompiler        : 'me.panavtec:coordinator-compiler:1.1.5',
                     threaddecoratedview        : 'me.panavtec:threaddecoratedview-common:1.5.1',
-                    threaddecoratedviewcompiler: 'me.panavtec:threaddecoratedview-compiler:1.5.1']
+                    threaddecoratedviewcompiler: 'me.panavtec:threaddecoratedview-compiler:1.5.1',
+                    javaxInjectAnnotations: 'javax.inject:javax.inject:1']
 
     testDependencies = [mockito      : 'org.mockito:mockito-all:2.0.2-beta',
                         junit        : 'junit:junit:4.12',
