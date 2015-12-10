@@ -1,15 +1,15 @@
-apply from: './gigigo-orchextra-sdk-android/settings.gradle'
+apply from: './orchextra-sdk/settings.gradle'
 
 include ':app', ':presentation', ':domain', ':repository', ':data',
     ':orchextrasdk',
     ':ggg-java-lib', ':ggglib', ':ggglogger'
 
-project(':orchextrasdk').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk')
-project(':orchextrasdk-control').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk-control')
-project(':orchextrasdk-domain').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk-domain')
-project(':orchextrasdk-dataprovision').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk-dataprovision')
-project(':orchextrasdk-data').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/orchextrasdk-data')
+project(':orchextrasdk').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk')
+project(':orchextrasdk-control').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-control')
+project(':orchextrasdk-domain').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-domain')
+project(':orchextrasdk-dataprovision').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-dataprovision')
+project(':orchextrasdk-data').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-data')
 
-project(':ggg-java-lib').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/gigigo-gigigoutilssuite-android/ggg-java-lib')
-project(':ggglib').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/gigigo-gigigoutilssuite-android/ggglib')
-project(':ggglogger').projectDir = new File(settingsDir, './gigigo-orchextra-sdk-android/gigigo-gigigoutilssuite-android/ggglogger')
+project(':ggg-java-lib').projectDir = new File(settingsDir, './orchextra-sdk/gigigo-utils-suite/ggg-java-lib')
+project(':ggglib').projectDir = new File(settingsDir, './orchextra-sdk/gigigo-utils-suite/ggglib')
+project(':ggglogger').projectDir = new File(settingsDir, './orchextra-sdk/gigigo-utils-suite/ggglogger')
