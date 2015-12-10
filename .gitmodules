@@ -1,3 +1,3 @@
 [submodule "orchextra-sdk"]
-	path = orchextra-sdk
+	path = gigigo-orchextra-sdk-android
 	url = git@bitbucket.org:gigigo/gigigo-orchextra-sdk-android.git
