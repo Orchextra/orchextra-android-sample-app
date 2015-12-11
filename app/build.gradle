@@ -16,9 +16,6 @@ android {
     versionCode parent.ext.androidVersionCode
     versionName parent.ext.androidVersionName
 
-    // Enabling multidex support.
-    multiDexEnabled true
-
     //    buildConfigField STRING, "ACCESS_TOKEN", '"e9ac846bcea1cd86b4f36c2c8999ba8e8d04fd28"'
     //    buildConfigField STRING, "REFRESH_TOKEN", '"9392d04aa6c3ba39749e462ad6d60cab4d22231a"'
     //    buildConfigField STRING, "CLIENT_TOKEN", '"undefined"'
