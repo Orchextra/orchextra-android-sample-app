@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   //public static class MyRunnable implements Runnable {
-  //  private final int j;
+  //  private  int j;
   //
   //  MyRunnable(int j) {
   //    this.j = j;
