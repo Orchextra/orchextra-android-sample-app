@@ -1,11 +1,11 @@
-# Orchextra-android-demo-app
+# Orchextra Android-demo-app
  
 The aim of this project is to help you with your first integration of Orchextra SDK and also to show you the capabilities of the SDK with a sample project. 
 
 ## Features
-1. Detection Geofences
-2. Detection Beacons
-3. Scanner Barcode/QR 
+1. Geofences detection
+2. Beacons detection
+3. Barcode and QR code scanner
 
 ## Getting started
 
@@ -14,7 +14,7 @@ First of all, you need to create a project in [Orchextra dashboard][dashboard]. 
   private final String API_KEY = "YOUR_API_KEY";
   private final String API_SECRET = "YOUR_API_SECRET";
 ```
-For using geofencing feature, you must go to [Google Developers Console][googleurl] activate Google Play Services and create a new project for obtain sender_id.
+For using geofencing feature, you must go to [Google Developers Console][googleurl] activate Google Play Services and create a new project to obtain a **sender_id**.
 ```java
   private final String GOOGLE_PLAY_SERVICES_SENDER_ID = "GOOGLE_PLAY_SERVICES_SENDER_ID";
 ```
