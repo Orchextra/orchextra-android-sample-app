@@ -17,7 +17,8 @@ allprojects {
                     threaddecoratedviewcompiler: 'me.panavtec:threaddecoratedview-compiler:1.5.1',
                     dexter                     : 'com.karumi:dexter:2.1.2',
                     javaxInjectAnnotations     : 'javax.inject:javax.inject:1',
-                    playServicesGcm            : 'com.google.android.gms:play-services-gcm:8.3.0',
+                    playServicesGcm            : 'com.google.android.gms:play-services-gcm:8.4.0',
+                    playServicesLocation       : 'com.google.android.gms:play-services-location:8.4.0',
                     realm                      : 'io.realm:realm-android:0.87.0'
     ]
 
