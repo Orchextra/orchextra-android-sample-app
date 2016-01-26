@@ -6,12 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import com.gigigo.ggglogger.GGGLogImpl;
-import com.gigigo.orchextra.Orchextra;
-import com.squareup.leakcanary.LeakCanary;
+
 import com.squareup.leakcanary.RefWatcher;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-    Orchextra.sdkInitialize(getApplicationContext(), "Hello", "World");
+
 
     //ExecutorService executor = Executors.newFixedThreadPool(4);
     //
