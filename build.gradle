@@ -23,7 +23,7 @@ allprojects {
     androidCompileSdkVersion = 23
     androidApplicationId = 'com.gigigo.orchextra.sample'
     androidVersionCode = 1
-    androidVersionName = '1.0'
+    androidVersionName = '1.0.0'
   }
 
   repositories {
