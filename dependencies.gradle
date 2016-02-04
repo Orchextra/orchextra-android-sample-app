@@ -20,7 +20,8 @@ allprojects {
                     playServicesGcm            : 'com.google.android.gms:play-services-gcm:8.4.0',
                     playServicesLocation       : 'com.google.android.gms:play-services-location:8.4.0',
                     realm                      : 'io.realm:realm-android:0.87.0',
-                    butterKnife                : 'com.jakewharton:butterknife:7.0.1'
+                    butterKnife                : 'com.jakewharton:butterknife:7.0.1',
+                    altBeacon                  : 'org.altbeacon:android-beacon-library:2+'
     ]
 
     testDependencies = [mockito      : 'org.mockito:mockito-core:2.0.31-beta',
