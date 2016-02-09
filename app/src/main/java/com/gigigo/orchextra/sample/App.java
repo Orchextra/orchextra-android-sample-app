@@ -3,7 +3,7 @@ package com.gigigo.orchextra.sample;
 import android.app.Application;
 
 import com.gigigo.orchextra.Orchextra;
-import com.gigigo.orchextra.initalization.OrchextraCompletionCallback;
+import com.gigigo.orchextra.domain.abstractions.initialization.OrchextraCompletionCallback;
 
 public class App extends Application implements OrchextraCompletionCallback {
 

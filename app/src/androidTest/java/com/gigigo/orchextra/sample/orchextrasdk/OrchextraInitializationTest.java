@@ -1,5 +1,6 @@
 package com.gigigo.orchextra.sample.orchextrasdk;
 
+import android.app.Application;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -22,6 +23,7 @@ import static junit.framework.Assert.*;
 public class OrchextraInitializationTest {
 
   Context ctx;
+  Application app;
 
   public OrchextraInitializationTest() {
   }
@@ -38,7 +40,9 @@ public class OrchextraInitializationTest {
 
   @Test
   public void initializationTest() throws InterruptedException {
-    Orchextra.sdkInitialize(ctx, "Hello", "World");
+    //TODO Changed ctx to app
+    //Orchextra.sdkInitialize(ctx, "Hello", "World", null);
+    Orchextra.sdkInitialize(app, "Hello", "World", null);
     assertNotNull(Orchextra.getInjector());
   }
 
