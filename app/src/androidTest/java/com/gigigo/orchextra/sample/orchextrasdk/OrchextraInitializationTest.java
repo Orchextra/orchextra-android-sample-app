@@ -43,18 +43,9 @@ public class OrchextraInitializationTest {
 
   @Test
   public void initializationTest() throws InterruptedException {
-    Orchextra.sdkInitialize(application, "Hello", "World", new OrchextraCompletionCallback() {
-      @Override
-      public void onSuccess() {
-
-      }
-
-      @Override
-      public void onError(String s) {
-
-      }
-    });
-
+    //TODO Changed ctx to app
+    //Orchextra.sdkInitialize(ctx, "Hello", "World", null);
+    Orchextra.sdkInitialize(application, "Hello", "World", null);
     assertNotNull(Orchextra.getInjector());
   }
 
