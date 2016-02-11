@@ -25,12 +25,12 @@ allprojects {
 
     ]
 
-    testDependencies = [mockito      : 'org.mockito:mockito-core:2.0.31-beta',
-                        junit        : 'junit:junit:4.12',
-                        testRunner   : 'com.android.support.test:runner:0.4.1',
-                        testRules    : 'com.android.support.test:rules:0.4.1',
-                        espresso     : 'com.android.support.test.espresso:espresso-core:2.2.1',
-                        mockWebServer: 'com.squareup.okhttp:mockwebserver:2.6.0'
+    testDependencies = [mockito             : 'org.mockito:mockito-core:2.0.31-beta',
+                        junit               : 'junit:junit:4.12',
+                        androidTestRunner   : 'com.android.support.test:runner:0.4.1',
+                        androidTestRules    : 'com.android.support.test:rules:0.4.1',
+                        espresso            : 'com.android.support.test.espresso:espresso-core:2.2.1',
+                        mockWebServer       : 'com.squareup.okhttp:mockwebserver:2.6.0'
                         ]
   }
 }
