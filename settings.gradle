@@ -1,9 +1,8 @@
 apply from: './orchextra-sdk/settings.gradle'
 
-include ':app', ':presentation', ':domain', ':repository', ':data',
-    ':orchextrasdk',
-    ':ggg-java-lib', ':ggglib', ':ggglogger'
+include ':orchextra-sdk',':app', ':presentation', ':domain', ':repository', ':data'
 
+project(':orchextra-sdk').projectDir = new File(settingsDir, './orchextra-sdk/')
 project(':orchextrasdk').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk')
 project(':orchextrasdk-control').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-control')
 project(':orchextrasdk-domain').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk-domain')

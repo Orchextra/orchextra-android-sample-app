@@ -7,11 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.squareup.leakcanary.RefWatcher;
+//import com.squareup.leakcanary.RefWatcher;
 
 public class MainActivity extends AppCompatActivity {
 
-  RefWatcher leakCannaryWatcher = null;
+  //RefWatcher leakCannaryWatcher = null;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

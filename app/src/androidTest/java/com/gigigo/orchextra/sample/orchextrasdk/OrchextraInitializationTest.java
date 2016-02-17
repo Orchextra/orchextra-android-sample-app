@@ -40,8 +40,6 @@ public class OrchextraInitializationTest {
 
   @Test
   public void initializationTest() throws InterruptedException {
-    //TODO Changed ctx to app
-    //Orchextra.sdkInitialize(ctx, "Hello", "World", null);
     Orchextra.sdkInitialize(app, "Hello", "World", null);
     assertNotNull(Orchextra.getInjector());
   }

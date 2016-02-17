@@ -30,6 +30,7 @@ allprojects {
     jcenter()
     mavenCentral()
   }
+
 }
 
 task clean(type: Delete) {
