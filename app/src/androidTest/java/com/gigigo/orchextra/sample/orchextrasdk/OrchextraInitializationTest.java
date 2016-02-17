@@ -1,11 +1,13 @@
 package com.gigigo.orchextra.sample.orchextrasdk;
 
-import android.app.Application;
 import android.app.Instrumentation;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
+import android.test.mock.MockApplication;
+
 import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.domain.abstractions.initialization.OrchextraCompletionCallback;
 import com.gigigo.orchextra.sample.MainActivity;
 import com.gigigo.orchextra.sample.MyRunner;
 import org.junit.Before;
@@ -23,7 +25,7 @@ import static junit.framework.Assert.*;
 public class OrchextraInitializationTest {
 
   Context ctx;
-  Application app;
+  private MockApplication application;
 
   public OrchextraInitializationTest() {
   }
@@ -36,11 +38,12 @@ public class OrchextraInitializationTest {
     Instrumentation instrumentation
         = InstrumentationRegistry.getInstrumentation();
     ctx = instrumentation.getTargetContext();
+    application = new MockApplication();
   }
 
   @Test
   public void initializationTest() throws InterruptedException {
-    Orchextra.sdkInitialize(app, "Hello", "World", null);
+    Orchextra.sdkInitialize(application, "Hello", "World", null);
     assertNotNull(Orchextra.getInjector());
   }
 

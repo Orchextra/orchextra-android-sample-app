@@ -69,8 +69,8 @@ dependencies {
 
   testCompile rootProject.ext.testDependencies.junit
 
-  androidTestCompile  rootProject.ext.testDependencies.testRunner
-  androidTestCompile  rootProject.ext.testDependencies.testRules
+  androidTestCompile  rootProject.ext.testDependencies.androidTestRunner
+  androidTestCompile  rootProject.ext.testDependencies.androidTestRules
   androidTestCompile  rootProject.ext.testDependencies.espresso
 
 }
