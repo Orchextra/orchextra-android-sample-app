@@ -7,7 +7,6 @@ import android.support.test.rule.ActivityTestRule;
 import android.test.mock.MockApplication;
 
 import com.gigigo.orchextra.Orchextra;
-import com.gigigo.orchextra.domain.abstractions.initialization.OrchextraCompletionCallback;
 import com.gigigo.orchextra.sample.MainActivity;
 import com.gigigo.orchextra.sample.MyRunner;
 import org.junit.Before;
