@@ -11,7 +11,7 @@ public class App extends Application implements OrchextraCompletionCallback {
     @Override
     public void onCreate() {
         super.onCreate();
-        Orchextra.sdkInitialize(this , "62082e690a55e072f4a8c86aadf514a88a3783f0", "b5816da6633994dbd498fbde3fe8675ebb20ab50", this);
+        Orchextra.sdkInitialize(this , "51318cdb73dc01a329ef9a04f155d744ffacedfe", "c29fd5e7d09c24474b74b297a3e7eef57cd1d2bc", this);
     }
 
     @Override public void onSuccess() {
