@@ -2,7 +2,9 @@ package com.gigigo.orchextra.sample;
 
 import android.app.Application;
 
+import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.domain.abstractions.actions.CustomSchemeReceiver;
 import com.gigigo.orchextra.domain.abstractions.initialization.OrchextraCompletionCallback;
 
 
@@ -11,7 +13,13 @@ public class App extends Application implements OrchextraCompletionCallback {
     @Override
     public void onCreate() {
         super.onCreate();
-        Orchextra.sdkInitialize(this , "51318cdb73dc01a329ef9a04f155d744ffacedfe", "c29fd5e7d09c24474b74b297a3e7eef57cd1d2bc", this);
+        Orchextra.sdkInitialize(this, "f7ae1c1bb7a556fdc9b517706d6f7a0c041334d9", "1a9e4aeadc38b3234b0cd119279ddfb1d9bf7f28", this);
+        Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
+            @Override
+            public void onReceive(String scheme) {
+                GGGLogImpl.log("SCHEME: " + scheme);
+            }
+        });
     }
 
     @Override public void onSuccess() {
