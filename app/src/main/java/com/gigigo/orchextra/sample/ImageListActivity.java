@@ -35,6 +35,9 @@ public class ImageListActivity extends AppCompatActivity {
 
     private int intExtra;
 
+    Handler handler = new Handler();
+    private Runnable runnable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +72,7 @@ public class ImageListActivity extends AppCompatActivity {
 
         final boolean hasToInitNewActivity = (intExtra < MAX_STACK_ACTIVITIES) || Math.random() * 3 != 1;
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
+        runnable = new Runnable() {
             @Override
             public void run() {
                 if (hasToInitNewActivity) {
@@ -79,7 +81,16 @@ public class ImageListActivity extends AppCompatActivity {
                     finishActivity();
                 }
             }
-        }, 2500);
+        };
+
+        handler.postDelayed(runnable, 2500);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        handler.removeCallbacks(runnable);
     }
 
     private void finishActivity() {
