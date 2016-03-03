@@ -70,15 +70,13 @@ public class ImageListActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        final boolean hasToInitNewActivity = (intExtra < MAX_STACK_ACTIVITIES) || Math.random() * 3 != 1;
+        final boolean hasToInitNewActivity = (intExtra < MAX_STACK_ACTIVITIES);
 
         runnable = new Runnable() {
             @Override
             public void run() {
                 if (hasToInitNewActivity) {
                     startNewActivity(intExtra);
-                } else {
-                    finishActivity();
                 }
             }
         };
