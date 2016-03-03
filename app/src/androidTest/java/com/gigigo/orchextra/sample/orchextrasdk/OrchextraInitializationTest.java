@@ -6,7 +6,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.test.mock.MockApplication;
 
-import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.sdk.OrchextraManager;
 import com.gigigo.orchextra.sample.MainActivity;
 import com.gigigo.orchextra.sample.MyRunner;
 import org.junit.Before;
@@ -42,8 +42,8 @@ public class OrchextraInitializationTest {
 
   @Test
   public void initializationTest() throws InterruptedException {
-    Orchextra.sdkInitialize(application, "Hello", "World", null);
-    assertNotNull(Orchextra.getInjector());
+    OrchextraManager.sdkInitialize(application, "Hello", "World", null);
+    assertNotNull(OrchextraManager.getInjector());
   }
 
 }
