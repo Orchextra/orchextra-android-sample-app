@@ -24,7 +24,6 @@ import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
 import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
-import com.gigigo.orchextra.OrchextraCompletionCallback;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +36,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Orchextra.sdkInitialize(this, "240f87d92474068b4ff8c3913f828212b0e16108", "768d071ce2db5af45725ea791d0e092a6045b955", null);
+        Orchextra.sdkInitialize(this, "cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f", null);
 
         Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
             @Override
