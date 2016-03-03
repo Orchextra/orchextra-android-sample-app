@@ -34,10 +34,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-/**
- * Created by Sergio Martinez Rodriguez
- * Date 26/11/15.
- */
 @RunWith(MyRunner.class)
 public class GGGLoggerIntegrationTest {
 
