@@ -27,10 +27,10 @@ android {
   buildTypes {
     demo1 {
       signingConfig android.signingConfigs.debug
-      testCoverageEnabled = true
+//      testCoverageEnabled = true
     }
     debug {
-      testCoverageEnabled = true
+//      testCoverageEnabled = true
     }
     release {
       minifyEnabled false
