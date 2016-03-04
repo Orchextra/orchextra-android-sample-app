@@ -22,12 +22,7 @@ import android.app.Application;
 
 import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
-import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.GregorianCalendar;
 
 
 public class App extends Application {
@@ -45,10 +40,10 @@ public class App extends Application {
             }
         });
 
-        Orchextra.setUser(new ORCUser("1234567890",
-                new GregorianCalendar(1990, 10, 13),
-                ORCUser.Gender.ORCGenderMale,
-                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
+//        Orchextra.setUser(new ORCUser("1234567890",
+//                new GregorianCalendar(1990, 10, 13),
+//                ORCUser.Gender.ORCGenderMale,
+//                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
 
     }
 }
