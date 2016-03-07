@@ -82,6 +82,7 @@ dependencies {
   compile rootProject.ext.dependencies.butterKnife
   compile 'com.github.bumptech.glide:glide:3.7.0'
   compile 'com.github.cmc00022:easyrecycleradapters:1.1.1'
+  compile project(':applvsdklib')
 
   debugCompile rootProject.ext.dependencies.leakcanaryDebug
   releaseCompile rootProject.ext.dependencies.leakcanaryRelease

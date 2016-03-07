@@ -18,7 +18,7 @@
 
 apply from: './orchextra-sdk/settings.gradle'
 
-include ':orchextra-sdk',':app', ':presentation', ':domain', ':repository', ':data'
+include ':orchextra-sdk', ':app', ':presentation', ':domain', ':repository', ':data', ':applvsdklib'
 
 project(':orchextra-sdk').projectDir = new File(settingsDir, './orchextra-sdk/')
 project(':orchextrasdk').projectDir = new File(settingsDir, './orchextra-sdk/orchextrasdk')

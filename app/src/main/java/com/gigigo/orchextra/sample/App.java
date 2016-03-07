@@ -20,6 +20,7 @@ package com.gigigo.orchextra.sample;
 
 import android.app.Application;
 
+import com.applivery.applvsdklib.Applivery;
 import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
 import com.gigigo.orchextra.Orchextra;
@@ -30,6 +31,8 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        Applivery.init(this, "56d9601ccf4d6a8d78b5ada0", "6e34a7b04b39cd86ba3081f90fd092b45fc69464", false);
 
         Orchextra.sdkInitialize(this, "cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f", null);
 
