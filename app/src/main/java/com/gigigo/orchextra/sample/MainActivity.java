@@ -19,6 +19,7 @@
 package com.gigigo.orchextra.sample;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -43,11 +44,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-//import com.squareup.leakcanary.RefWatcher;
-
 public class MainActivity extends AppCompatActivity {
-
-  //RefWatcher leakCannaryWatcher = null;
 
   @Bind(R.id.layoutContainer) View layoutContainer;
 
@@ -72,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
   @Bind(R.id.addTagButton) Button addTagButton;
 
   @Bind(R.id.clearTagsButton) Button clearTagsButton;
+
+  @Bind(R.id.openLogViewButton) Button openLogViewButton;
 
   String crmId;
   boolean isMale;
@@ -150,18 +149,13 @@ public class MainActivity extends AppCompatActivity {
       }
     });
 
-
-    //ExecutorService executor = Executors.newFixedThreadPool(4);
-    //
-    //for (int i = 0; i < 4; i++) {
-    //
-    //  Runnable worker = new MyRunnable(i);
-    //  leakCannaryWatcher.watch(worker);
-    //  executor.execute(worker);
-    //
-    //}
-    //executor.shutdown();
-
+    openLogViewButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, LogActivity.class);
+        startActivity(intent);
+      }
+    });
   }
 
   private void sendOrchextraCrm() {
@@ -235,20 +229,4 @@ public class MainActivity extends AppCompatActivity {
           break;
     }
   }
-
-  //public static class MyRunnable implements Runnable {
-  //  private  int j;
-  //
-  //  MyRunnable(int j) {
-  //    this.j = j;
-  //  }
-  //
-  //  @Override
-  //  public void run() {
-  //    for(int i=0; i<1000; i++){
-  //      GGGLogImpl.log("THIS IS MY LOGER "+ j +" Logging " + i , true);
-  //    }
-  //  }
-//}
-
 }

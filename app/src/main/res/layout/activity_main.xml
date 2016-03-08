@@ -136,6 +136,13 @@
                 android:text="Limpiar Tags"/>
         </LinearLayout>
 
+        <Button
+            android:layout_marginTop="16dp"
+            android:id="@+id/openLogViewButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abrir Log"/>
+
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
