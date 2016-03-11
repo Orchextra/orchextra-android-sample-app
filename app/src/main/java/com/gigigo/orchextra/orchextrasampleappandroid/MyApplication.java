@@ -7,10 +7,10 @@ import android.util.Log;
 import android.webkit.URLUtil;
 import android.widget.Toast;
 
-import com.gigigo.orchextra.OrchextraStartCompletionCallback;
-import com.gigigo.orchextra.authentication.Orchextra;
-import com.gigigo.orchextra.model.CustomSchemeReceiver;
-import com.gigigo.orchextra.model.ORCUser;
+import com.gigigo.orchextra.CustomSchemeReceiver;
+import com.gigigo.orchextra.ORCUser;
+import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.OrchextraCompletionCallback;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,9 +20,8 @@ public class MyApplication extends Application {
     //Orchextra constants region
     //constants can be defined at build config as well, this is for the sake of the example
 
-    private final String API_KEY = "YOUR_API_KEY";
-    private final String API_SECRET = "YOUR_API_SECRET";
-    private final String GOOGLE_PLAY_SERVICES_SENDER_ID = "GOOGLE_PLAY_SERVICES_SENDER_ID";//this id must be created in your developer Google Console
+    private final String API_KEY = "key";
+    private final String API_SECRET = "secret";
 
     //the crmId is for identificate this app client, this can be your user ID after log in
     private final String ORCHEXTRA_CRM_USER_ID = "YOUR_CRM_ID";
@@ -39,14 +38,23 @@ public class MyApplication extends Application {
 
     private void initOrchextra() {
 
+        //TODO Set debug is not available in this version
         //default is false, check the log for info about Orchextra
-        Orchextra.setDebug(true);
+//        Orchextra.setDebug(true);
+
+        //You MUST call init inside app onCreate, otherwise this sdk won't work
+        Orchextra.init(this, orchextraCallback);
+
         //setting Receiver for custom scheme
         Orchextra.setCustomSchemeReceiver(customSchemeReceiver);
-        //set Orchextra User
-        Orchextra.setUser(orchextraUser);
+
         //start Orchextra
-        Orchextra.start(this, API_KEY, API_SECRET, GOOGLE_PLAY_SERVICES_SENDER_ID, orchextraCallback);
+        //You can start Orchextra anywhere in your app
+        Orchextra.start(API_KEY, API_SECRET);
+
+        //set Orchextra User
+        //Recommended as best practice use this method in login feature for instance
+        Orchextra.setUser(orchextraUser);
     }
 
     //region Orchextra User
@@ -55,18 +63,23 @@ public class MyApplication extends Application {
    //endregion
 
     //region Callback Orchextra Start
-    private OrchextraStartCompletionCallback orchextraCallback = new OrchextraStartCompletionCallback() {
+    private OrchextraCompletionCallback orchextraCallback = new OrchextraCompletionCallback() {
         @Override
         public void onSuccess() {
-            Toast toast = Toast.makeText(getApplicationContext(), R.string.orchextra_ok_message, Toast.LENGTH_LONG);
-            toast.show();
+            Toast.makeText(getApplicationContext(), R.string.orchextra_ok_message, Toast.LENGTH_LONG).show();
         }
 
         @Override
         public void onError(String errorMsg) {
             if (errorMsg != null) {
-                Toast toast = Toast.makeText(getApplicationContext(), R.string.orchextra_ok_message + errorMsg, Toast.LENGTH_LONG);
-                toast.show();
+                Toast.makeText(getApplicationContext(), getString(R.string.orchextra_ok_message, errorMsg), Toast.LENGTH_LONG).show();
+            }
+        }
+
+        @Override
+        public void onInit(String message) {
+            if (message != null) {
+                Toast.makeText(getApplicationContext(), getString(R.string.orchextra_init_message, message), Toast.LENGTH_LONG).show();
             }
         }
     };

@@ -11,14 +11,14 @@
     tools:context="com.gigigo.orchextra.orchextrasampleappandroid.MainActivity"
     >
 
-    <Button
-        android:id="@+id/orchextra_qr_scan"
-        android:text="@string/orchextra_lauch_scan_button_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/button_margin_sides"
-        android:layout_marginLeft="@dimen/button_margin_sides"
-        android:layout_marginBottom="@dimen/button_margin_bottom"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/orchextra_qr_scan"-->
+        <!--android:text="@string/orchextra_lauch_scan_button_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="@dimen/button_margin_sides"-->
+        <!--android:layout_marginLeft="@dimen/button_margin_sides"-->
+        <!--android:layout_marginBottom="@dimen/button_margin_bottom"-->
+        <!--/>-->
 
 </RelativeLayout>
