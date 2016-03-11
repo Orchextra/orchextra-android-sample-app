@@ -36,12 +36,12 @@ public class App extends Application {
 
         Orchextra.sdkInitialize(this, "cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f", null);
 
-        Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
-            @Override
-            public void onReceive(String scheme) {
-                GGGLogImpl.log("SCHEME: " + scheme);
-            }
-        });
+//        Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
+//            @Override
+//            public void onReceive(String scheme) {
+//                GGGLogImpl.log("SCHEME: " + scheme);
+//            }
+//        });
 
 //        Orchextra.setUser(new ORCUser("1234567890",
 //                new GregorianCalendar(1990, 10, 13),

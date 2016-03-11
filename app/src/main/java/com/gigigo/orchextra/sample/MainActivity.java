@@ -32,6 +32,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.gigigo.orchextra.CustomSchemeReceiver;
 import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
 import com.gigigo.orchextra.sample.sharedPreferences.SharedPref;
@@ -71,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
   @Bind(R.id.clearTagsButton) Button clearTagsButton;
 
   @Bind(R.id.openLogViewButton) Button openLogViewButton;
+
+  @Bind(R.id.schemeEditText) EditText schemeEditText;
+
+  @Bind(R.id.clearScheme) Button clearScheme;
 
   String crmId;
   boolean isMale;
@@ -154,6 +159,20 @@ public class MainActivity extends AppCompatActivity {
       public void onClick(View v) {
         Intent intent = new Intent(MainActivity.this, LogActivity.class);
         startActivity(intent);
+      }
+    });
+
+    Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
+      @Override
+      public void onReceive(String scheme) {
+        schemeEditText.setText(schemeEditText.getText() + "\n" + scheme);
+      }
+    });
+
+    clearScheme.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        schemeEditText.setText("");
       }
     });
   }
