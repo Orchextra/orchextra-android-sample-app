@@ -17,6 +17,5 @@ First of all, you need to create a project in [Orchextra dashboard][dashboard]. 
 
 <img src="https://github.com/Orchextra/orchextra-android-demo-app/blob/master/resources/main.png" width="300">
 
-
 [dashboard]: https://dashboard.orchextra.io/home/
 [googleurl]: https://console.developers.google.com
