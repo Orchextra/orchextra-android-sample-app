@@ -23,7 +23,13 @@ import android.app.Application;
 import com.applivery.applvsdklib.Applivery;
 import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
+import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.OrchextraCompletionCallback;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.GregorianCalendar;
 
 
 public class App extends Application {
@@ -34,19 +40,36 @@ public class App extends Application {
 
         Applivery.init(this, "56d9601ccf4d6a8d78b5ada0", "6e34a7b04b39cd86ba3081f90fd092b45fc69464", false);
 
-        Orchextra.sdkInitialize(this, "cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f", null);
+        Orchextra.init(this, new OrchextraCompletionCallback() {
+            @Override
+            public void onSuccess() {
+                GGGLogImpl.log("onSuccess");
+            }
 
-//        Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
-//            @Override
-//            public void onReceive(String scheme) {
-//                GGGLogImpl.log("SCHEME: " + scheme);
-//            }
-//        });
+            @Override
+            public void onError(String s) {
+                GGGLogImpl.log("onError: " + s);
+            }
 
-//        Orchextra.setUser(new ORCUser("1234567890",
-//                new GregorianCalendar(1990, 10, 13),
-//                ORCUser.Gender.ORCGenderMale,
-//                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
+            @Override
+            public void onInit(String s) {
+                GGGLogImpl.log("onInit: " + s);
+            }
+        });
+
+        Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
+            @Override
+            public void onReceive(String scheme) {
+                GGGLogImpl.log("SCHEME: " + scheme);
+            }
+        });
+
+        Orchextra.start("cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f");
+
+        Orchextra.setUser(new ORCUser("1234567890",
+                new GregorianCalendar(1990, 10, 13),
+                ORCUser.Gender.ORCGenderMale,
+                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
 
     }
 }
