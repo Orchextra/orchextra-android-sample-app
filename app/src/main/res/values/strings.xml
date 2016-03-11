@@ -5,6 +5,8 @@
 
   <string name="orchextra_ko_message">Orchextra not started dur to: </string>
 
+  <string name="orchextra_init_message">Orchextra initialization finished: </string>
+
   <string name="orchextra_received_custom_scheme">Custom scheme: </string>
 
   <string name="orchextra_lauch_scan_button_text">Launch Scan</string>

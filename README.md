@@ -5,7 +5,6 @@ The aim of this project is to help you with your first integration of Orchextra 
 ## Features
 1. Geofences detection
 2. Beacons detection
-3. Barcode and QR code scanner
 
 ## Getting started
 
@@ -13,10 +12,6 @@ First of all, you need to create a project in [Orchextra dashboard][dashboard]. 
 ```java
   private final String API_KEY = "YOUR_API_KEY";
   private final String API_SECRET = "YOUR_API_SECRET";
-```
-For using geofencing feature, you must go to [Google Developers Console][googleurl] activate Google Play Services and create a new project to obtain a **sender_id**.
-```java
-  private final String GOOGLE_PLAY_SERVICES_SENDER_ID = "GOOGLE_PLAY_SERVICES_SENDER_ID";
 ```
 ## Project Overview
 
