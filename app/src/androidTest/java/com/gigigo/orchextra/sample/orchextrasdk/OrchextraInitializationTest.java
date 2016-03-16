@@ -57,7 +57,7 @@ public class OrchextraInitializationTest {
 
   @Test
   public void initializationTest() throws InterruptedException {
-    OrchextraManager.sdkInitialize(application, "Hello", "World", null);
+    OrchextraManager.sdkInit(application, null);
     assertNotNull(OrchextraManager.getInjector());
   }
 

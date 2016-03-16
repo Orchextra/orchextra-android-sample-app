@@ -32,9 +32,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
 import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
+import com.gigigo.orchextra.device.notifications.AndroidNotificationBuilder;
+import com.gigigo.orchextra.domain.model.actions.strategy.OrchextraNotification;
 import com.gigigo.orchextra.sample.sharedPreferences.SharedPref;
 
 import java.util.ArrayList;
@@ -129,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         if (text != null) {
           String s = text.toString();
           if (!s.isEmpty()) {
-              listTags.setText(listTags.getText() + s + ", ");
+            listTags.setText(listTags.getText() + s + ", ");
           }
         }
         tagTextView.setText("");
@@ -165,7 +168,16 @@ public class MainActivity extends AppCompatActivity {
     Orchextra.setCustomSchemeReceiver(new CustomSchemeReceiver() {
       @Override
       public void onReceive(String scheme) {
+        GGGLogImpl.log("scheme:" + scheme);
         schemeEditText.setText(schemeEditText.getText() + "\n" + scheme);
+
+        AndroidNotificationBuilder notificationBuilder = new AndroidNotificationBuilder(MainActivity.this);
+
+        OrchextraNotification orchextraNotification = new OrchextraNotification();
+        orchextraNotification.setTitle("Orchextra");
+        orchextraNotification.setBody(scheme);
+
+        notificationBuilder.createNotification(orchextraNotification, null);
       }
     });
 
@@ -173,6 +185,13 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onClick(View v) {
         schemeEditText.setText("");
+      }
+    });
+
+    schemeEditText.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        layoutContainer.setVisibility(layoutContainer.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
       }
     });
   }

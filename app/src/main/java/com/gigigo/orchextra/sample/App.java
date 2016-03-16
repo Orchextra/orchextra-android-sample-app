@@ -19,17 +19,13 @@
 package com.gigigo.orchextra.sample;
 
 import android.app.Application;
+import android.widget.Toast;
 
 import com.applivery.applvsdklib.Applivery;
 import com.gigigo.ggglogger.GGGLogImpl;
 import com.gigigo.orchextra.CustomSchemeReceiver;
-import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
 import com.gigigo.orchextra.OrchextraCompletionCallback;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.GregorianCalendar;
 
 
 public class App extends Application {
@@ -44,16 +40,19 @@ public class App extends Application {
             @Override
             public void onSuccess() {
                 GGGLogImpl.log("onSuccess");
+                Toast.makeText(App.this, "onSuccess", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onError(String s) {
                 GGGLogImpl.log("onError: " + s);
+                Toast.makeText(App.this, "onError: " + s, Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onInit(String s) {
                 GGGLogImpl.log("onInit: " + s);
+                Toast.makeText(App.this, "onInit: " + s, Toast.LENGTH_LONG).show();
             }
         });
 
@@ -66,10 +65,10 @@ public class App extends Application {
 
         Orchextra.start("cf35964911b0dbc36990edc57250f5e6d9aed826", "a77a2214c54cbbabcb351dc44f3ee0b24efd198f");
 
-        Orchextra.setUser(new ORCUser("1234567890",
-                new GregorianCalendar(1990, 10, 13),
-                ORCUser.Gender.ORCGenderMale,
-                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
+//        Orchextra.setUser(new ORCUser("1234567890",
+//                new GregorianCalendar(1990, 10, 13),
+//                ORCUser.Gender.ORCGenderMale,
+//                new ArrayList<>(Arrays.asList("keyword1", "keyword2"))));
 
     }
 }
