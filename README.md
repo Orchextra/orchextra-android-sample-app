@@ -1,4 +1,4 @@
-+[![Build Status](https://travis-ci.org/Orchextra/orchextra-android--sample-app.svg?branch=master)](https://travis-ci.org/Orchextra/orchextra-android--sample-app) 
+[![Build Status](https://travis-ci.org/Orchextra/orchextra-android-sample-app.svg?branch=master)](https://travis-ci.org/Orchextra/orchextra-android-sample-app) 
 
 # Orchextra Android-sample-app
  
