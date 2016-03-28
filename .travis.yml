@@ -7,7 +7,7 @@ env:
   - ANDROID_ABI=armeabi-v7a
 
 notifications:
-  slack: applivery:KX1jJ5dWdGbw0xXOXImfKgSD#ci
+  slack: orchextra:edTGY2Fgw81QDHRDS3pfEixE#ci
 
 android:
   components:
