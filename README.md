@@ -1,3 +1,5 @@
++[![Build Status](https://travis-ci.org/Orchextra/orchextra-android--sample-app.svg?branch=master)](https://travis-ci.org/Orchextra/orchextra-android--sample-app) 
+
 # Orchextra Android-sample-app
  
 The aim of this project is to help you with your first integration of Orchextra SDK and also to show you the capabilities of the SDK with a sample project. 
