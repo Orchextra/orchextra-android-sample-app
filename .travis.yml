@@ -20,5 +20,8 @@ android:
     - sys-img-armeabi-v7a-android-19
     - extra-android-m2repository
 
+before_install:
+   - chmod +x gradlew
+
 script:
    - ./gradlew build
