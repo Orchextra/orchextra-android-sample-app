@@ -17,8 +17,12 @@
   ~ limitations under the License.
   -->
 
-<resources>
-  <color name="color_primary">#3F51B5</color>
-  <color name="color_primary_dark">#303F9F</color>
-  <color name="color_accent">#FF4081</color>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@android:drawable/ic_menu_view"
+        android:id="@+id/scanner"
+        android:title="Open Scanner"
+        />
+
+</menu>

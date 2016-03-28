@@ -20,11 +20,16 @@ package com.gigigo.orchextra.sample;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -49,6 +54,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
+
+  @Bind(R.id.toolbar)
+  Toolbar toolbar;
 
   @Bind(R.id.layoutContainer) View layoutContainer;
 
@@ -90,7 +98,11 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
+    Drawable drawable = getResources().getDrawable(com.gigigo.orchextra.R.mipmap.ic_launcher);
+
     ButterKnife.bind(this);
+
+    setSupportActionBar(toolbar);
 
     crmId = SharedPref.getCrmId(this);
     isMale = SharedPref.getGender(this);
@@ -267,4 +279,24 @@ public class MainActivity extends AppCompatActivity {
           break;
     }
   }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.menu_main_activity, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.scanner:
+        Orchextra.startScannerActivity();
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }
+
+
 }
