@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Orchextra/orchextra-android-sample-app.svg?branch=master)](https://travis-ci.org/Orchextra/orchextra-android-sample-app) 
+![Platform](https://img.shields.io/badge/Platform-Android-brightgreen.svg)
+![Language](https://img.shields.io/badge/Language-Java-brightred.svg)
 
 # Orchextra Android-sample-app
  
