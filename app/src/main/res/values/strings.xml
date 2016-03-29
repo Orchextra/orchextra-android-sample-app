@@ -33,5 +33,7 @@
         completions."
     </string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="ox_scanner_title_toolbar">Scanner App</string>
+
 </resources>

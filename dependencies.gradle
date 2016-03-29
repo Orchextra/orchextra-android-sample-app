@@ -40,7 +40,7 @@ allprojects {
                     realm                      : 'io.realm:realm-android:0.87.0',
                     butterKnife                : 'com.jakewharton:butterknife:7.0.1',
                     altBeacon                  : 'org.altbeacon:android-beacon-library:2+',
-                    barcodescanner             : 'me.dm7.barcodescanner:zbar:1.8.3'
+                    barcodescanner             : 'me.dm7.barcodescanner:zbar:1.8.4'
 
     ]
 

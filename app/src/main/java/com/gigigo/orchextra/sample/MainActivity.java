@@ -20,7 +20,6 @@ package com.gigigo.orchextra.sample;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -97,8 +96,6 @@ public class MainActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
-    Drawable drawable = getResources().getDrawable(com.gigigo.orchextra.R.mipmap.ic_launcher);
 
     ButterKnife.bind(this);
 
