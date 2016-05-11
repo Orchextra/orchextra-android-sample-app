@@ -12,6 +12,7 @@ import com.gigigo.orchextra.ORCUser;
 import com.gigigo.orchextra.Orchextra;
 import com.gigigo.orchextra.OrchextraCompletionCallback;
 
+import com.gigigo.vuforiaimplementation.ImageRecognitionVuforiaImpl;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.GregorianCalendar;
@@ -48,6 +49,8 @@ public class MyApplication extends Application {
         //setting Receiver for custom scheme
         Orchextra.setCustomSchemeReceiver(customSchemeReceiver);
 
+        Orchextra.setImageRecognitionModule(new ImageRecognitionVuforiaImpl());
+
         //start Orchextra
         //You can start Orchextra anywhere in your app
         Orchextra.start(API_KEY, API_SECRET);
@@ -72,14 +75,14 @@ public class MyApplication extends Application {
         @Override
         public void onError(String errorMsg) {
             if (errorMsg != null) {
-                Toast.makeText(getApplicationContext(), getString(R.string.orchextra_ok_message, errorMsg), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.orchextra_ko_message + " " + errorMsg, Toast.LENGTH_LONG).show();
             }
         }
 
         @Override
         public void onInit(String message) {
             if (message != null) {
-                Toast.makeText(getApplicationContext(), getString(R.string.orchextra_init_message, message), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.orchextra_init_message + " " + message, Toast.LENGTH_LONG).show();
             }
         }
     };

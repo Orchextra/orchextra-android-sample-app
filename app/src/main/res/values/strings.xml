@@ -3,11 +3,15 @@
 
   <string name="orchextra_ok_message">Orchextra started successful</string>
 
-  <string name="orchextra_ko_message">Orchextra not started dur to: </string>
+  <string name="orchextra_ko_message">Orchextra not started due to: </string>
 
-  <string name="orchextra_init_message">Orchextra initialization finished: </string>
+  <string name="orchextra_init_message">Orchextra initialization finished, details:  </string>
 
   <string name="orchextra_received_custom_scheme">Custom scheme: </string>
 
   <string name="orchextra_lauch_scan_button_text">Launch Scan</string>
+
+  <string name="orchextra_lauch_ir_button_text">Launch Image Recognition</string>
+
+  <string name="ox_notifications_GCM_sender_id">566047498340</string>
 </resources>
