@@ -1,2 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('orchextracodescanner-1_8_3.aar'))
